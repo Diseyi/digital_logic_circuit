@@ -5,14 +5,12 @@ Implementation of digital logic circuit in Rust. [Digital Logic](https://github.
 ## Gates
 
 To use the logic gate
-```
+
+``` Rust
  use digital_circuit::logic::{Logic, AND};
 
- let and = AND { a: 1, b: 7 }.logic();
+    let and = AND { a: true, b: false }.logic();
 
- match and {
-        Ok(result) => println!(" {}", result),
-        Err(e) => println!("Error: {}", e),
-    }
+    println!(" {}", and);
  ```
  

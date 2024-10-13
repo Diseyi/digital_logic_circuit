@@ -1,10 +1,7 @@
 use digital_circuit::logic::{Logic, AND};
 
 fn main() {
-    let and = AND { a: 1, b: 7 }.logic();
+    let and = AND { a: true, b: false }.logic();
 
-    match and {
-        Ok(result) => println!(" {}", result),
-        Err(e) => println!("Error: {}", e),
-    }
+    println!(" {}", and);
 }
