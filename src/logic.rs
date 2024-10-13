@@ -9,11 +9,26 @@ pub struct AND {
 }
 impl Logic for AND {
     fn logic(&self) -> u8 {
-        if self.a && self.b  {
-            1
-        } else {
-            0
-        }
+        (self.a && self.b) as u8
+    }
+}
+
+pub struct OR {
+    pub a: bool,
+    pub b: bool,
+}
+impl Logic for OR {
+    fn logic(&self) -> u8 {
+        (self.a || self.b) as u8
+    }
+}
+
+pub struct NOT {
+    pub a: bool,
+}
+impl Logic for NOT {
+    fn logic(&self) -> u8 {
+        !self.a as u8
     }
 }
 
