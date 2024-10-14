@@ -19,12 +19,12 @@ To use the logic gate
     let xor = XOR { a: true, b: true }.logic();
     let xnor = XNOR { a: true, b: true }.logic();
 
-    println!("AND {}", and);
-    println!("OR {}", or);
-    println!("NOT {}", not);
-    println!("NAND {}", nand);
-    println!("NOR {}", nor);
-    println!("XOR {}", xor);
-    println!("XNOR {}", xnor);
+    println!("AND {}", and); // true
+    println!("OR {}", or); // false
+    println!("NOT {}", not); // true
+    println!("NAND {}", nand); // true
+    println!("NOR {}", nor); // false
+    println!("XOR {}", xor); // false
+    println!("XNOR {}", xnor); // true
  ```
  

@@ -1,6 +1,6 @@
 
 pub trait Logic {
-    fn logic(&self) -> u8;
+    fn logic(&self) -> bool;
 }
 
 pub struct AND {
@@ -38,44 +38,44 @@ pub struct XNOR {
 }
 
 impl Logic for AND {
-    fn logic(&self) -> u8 {
-        (self.a && self.b) as u8
+    fn logic(&self) -> bool {
+        self.a && self.b
     }
 }
 
 impl Logic for OR {
-    fn logic(&self) -> u8 {
-        (self.a || self.b) as u8
+    fn logic(&self) -> bool {
+        self.a || self.b
     }
 }
 
 impl Logic for NOT {
-    fn logic(&self) -> u8 {
-        !self.a as u8
+    fn logic(&self) -> bool {
+        !self.a
     }
 }
 
 impl Logic for NAND {
-    fn logic(&self) -> u8 {
-        (!self.a || !self.b) as u8
+    fn logic(&self) -> bool {
+        !self.a || !self.b
     }
 }
 
 impl Logic for NOR {
-    fn logic(&self) -> u8 {
-        (!self.a && !self.b) as u8
+    fn logic(&self) -> bool {
+        !self.a && !self.b
     }
 }
 
 impl Logic for XOR {
-    fn logic(&self) -> u8 {
-        (self.a ^ self.b) as u8
+    fn logic(&self) -> bool {
+        self.a ^ self.b
     }
 }
 
 impl Logic for XNOR {
-    fn logic(&self) -> u8 {
-       !(self.a ^ self.b) as u8
+    fn logic(&self) -> bool {
+       !self.a ^ self.b
     }
 }
 
