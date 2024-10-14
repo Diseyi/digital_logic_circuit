@@ -1,4 +1,5 @@
-use digital_circuit::gates::{Logic, AND, OR, NOT, NAND, NOR, XOR, XNOR};
+mod gates;
+use gates::{Logic, AND, OR, NOT, NAND, NOR, XOR, XNOR};
 
 fn main() {
     let and = AND { a: true, b: true }.logic();

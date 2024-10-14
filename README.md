@@ -9,7 +9,7 @@ The logic gates takes in two inputs and returns an output
 To use the logic gate
 
 ``` Rust
- use digital_circuit::logic::{Logic, AND};
+ use digital_circuit::logic::{Logic, AND, OR, NOT, NAND, NOR, XOR, XNOR};
 
     let and = AND { a: true, b: true }.logic();
     let or = OR { a: false, b: false }.logic();
